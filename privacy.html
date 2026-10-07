@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>geobingo — privacy</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; line-height: 1.55; color: #2b2b2b; background: #fff; }
+  h1 { color: #3a8dff; } h2 { margin-top: 2em; font-size: 1.15rem; }
+  @media (prefers-color-scheme: dark) { body { background: #131f24; color: #e8eef1; } }
+</style>
+</head>
+<body>
+<h1>geobingo — privacy</h1>
+<p>geobingo is a geography game. You can play without an account; your progress then stays only on your device.</p>
+<h2>If you sign in (optional)</h2>
+<p>Signing in with Google lets your XP count on the leaderboards. We ask Google for an ID that is unique to you in
+this app and for your <strong>email address</strong> (OpenID Connect scopes <code>openid email</code>). We do
+<strong>not</strong> receive or store your Google name or your photo.</p>
+<p>We store: a scrambled (hashed) form of that ID, your email address (private: never shown to other players or
+shared — it lets us reach you about your account), the display name you choose (shown publicly on the
+leaderboards), and the XP you earn while signed in. The data is kept in Google Cloud (Firestore, EU region).</p>
+<p>Instead of Google you can sign in with a 6-digit code sent to your email address (no password). We keep that
+email address privately, the same way.</p>
+<h2>Profile</h2>
+<p>If you sign in, your profile — display name, XP, badges, crowns (fastest times) and game statistics such as your
+day streak — can be seen by everyone and shared as a link. Your email address is never shown on it. You can change
+your name and email address on the profile page.</p>
+<h2>Progress backup</h2>
+<p>While you're signed in, your game progress (XP, streaks, which countries you've practised, best times and scores,
+badges and your app settings) is backed up to your account, so it comes back when you sign in again — also on
+another device. Signing out clears it from the device; it stays in your account.</p>
+<h2>Usage statistics</h2>
+<p>To see how geobingo is used, the app sends anonymous counts: a random device ID created by the app (not linked to
+you unless you're signed in), the app version, language, and events such as "a Flags quiz finished, 8 of 10
+right". No names, no location, no advertising or tracking by third parties.</p>
+<h2>Game log</h2>
+<p>Each game, flashcards run and Learn visit is also logged, to see which features are used and to re-score fairly
+if the rules for XP or badges change: what you played (topic, answer style, regions and other options), how it went
+(score, XP, time) and, for quizzes, each answer (which country, right or wrong, how you answered, how long it
+took). It's linked to your account if you're signed in, otherwise to the random device ID. No location, no voice
+recordings (only whether you answered by voice).</p>
+<p>Game log entries are kept for 12 months and then deleted automatically (entries from the current season are kept
+until it ends, as they may be needed to re-score it).</p>
+<p>To delete your data, email <a href="mailto:rgkiran@gmail.com">rgkiran@gmail.com</a> with your display name.</p>
+<p>This also deletes your game log.</p>
+<h2>Feedback</h2>
+<p>If you send feedback from the app (Settings → About), we store what you wrote together with the app version,
+language and device type (e.g. "iPhone, Safari") — nothing that identifies you. Please don't put personal details
+in the message.</p>
+<h2>Reminders</h2>
+<p>If you turn on reminders (Settings → Reminders), your browser's push service gives the app an address and keys to
+send it notifications. We store them with the hour you chose, your time zone, language, the app's address and your
+day streak / the day you last played (to word the reminder and to skip days you've already played) — not linked to
+an account. Turn reminders off and it is deleted; an app that hasn't opened for 45 days is forgotten too.</p>
+<h2>Datenschutz (Deutsch)</h2>
+<p>Die Anmeldung ist freiwillig. Von Google erhalten wir eine ID und deine E-Mail-Adresse (Scopes <code>openid
+email</code>) – keinen Namen, kein Foto. Gespeichert werden eine verschlüsselte (gehashte) Form dieser ID, deine
+E-Mail-Adresse (privat, nie für andere sichtbar), der von dir gewählte, öffentlich sichtbare Name und deine XP
+(Google Cloud, EU). Dein Profil (Name, XP, Abzeichen, Kronen, Statistik wie deine Tagesserie) ist für alle
+sichtbar und als Link teilbar – deine E-Mail nie. Solange du angemeldet bist, wird dein Spielfortschritt (XP, Serien, geübte Länder, Bestzeiten,
+Abzeichen, Einstellungen) in deinem Konto gesichert; beim Abmelden wird er vom Gerät gelöscht und kommt bei der
+nächsten Anmeldung zurück. Die App sendet außerdem anonyme Nutzungszahlen (zufällige Geräte-ID, Version, Sprache, z. B.
+„Flaggen-Quiz beendet, 8 von 10 richtig“) und protokolliert jedes Spiel, jeden Karteikarten-Durchgang und jeden
+Besuch in „Lernen“ (Thema, Optionen, Ergebnis, XP, Zeit, bei Quizzen jede Antwort – welches Land, richtig oder
+falsch, wie beantwortet, wie lange), verknüpft mit deinem Konto, wenn du angemeldet bist, sonst mit der zufälligen
+Geräte-ID – um zu sehen, was genutzt wird, und um bei neuen Regeln fair neu zu werten. Kein Standort, keine
+Sprachaufnahmen. Löschung auf Anfrage an
+<a href="mailto:rgkiran@gmail.com">rgkiran@gmail.com</a>.</p>
+<p>Erinnerungen (Einstellungen → Erinnerungen, freiwillig): gespeichert werden die Push-Adresse deines Browsers mit
+Schlüsseln, die gewählte Uhrzeit, Zeitzone, Sprache, App-Adresse und deine Tagesserie / der letzte Spieltag – ohne
+Konto. Beim Ausschalten wird alles gelöscht, ebenso nach 45 Tagen ohne App-Start.</p>
+<p>Feedback aus der App (Einstellungen → Über) wird mit App-Version, Sprache und Gerätetyp gespeichert – ohne
+Angaben, die dich identifizieren.</p>
+</body>
+</html>
