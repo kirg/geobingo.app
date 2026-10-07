@@ -1,0 +1,11 @@
+# Publishes this repository (geobingo.app's built files: prod at the top, beta/, alpha/ — written by scripts/deploy.sh
+# in kirg/geo) to Firebase Hosting. Run by the Cloud Build trigger "geobingo-site" on every push to main
+# (public/google-setup.sh in kirg/geo). Firebase keeps the last 10 versions; roll back in its console.
+steps:
+  - name: node:22
+    script: |
+      npx -y firebase-tools@14 deploy --only hosting --project "$PROJECT_ID" --non-interactive --message "$(git log -1 --format=%s 2>/dev/null || echo "$SHORT_SHA")"
+options:
+  automapSubstitutions: true
+  logging: CLOUD_LOGGING_ONLY
+timeout: 900s
